@@ -5,19 +5,23 @@
 </head>
 <script>
     let options = {
-        host: 'https://mqtt-client-test.herokuapp.com', //  https://mqtt-client-test.herokuapp.com/ , localhost
-        port: 443, // 443, 8081
-        protocol: 'wss' // wss, ws
+        host: 'localhost', //  https://mqtt-client-test.herokuapp.com/ , localhost
+        port: 8081, // 443, 8081
+        protocol: 'ws' // wss, ws
     };
     let client = mqtt.connect(options)
     client.on('connect', () => {
         console.log('connected');
     });
+
     client.subscribe("test_topic");
+
     client.on('message', function (topic, payload) {
         console.log([topic, payload].join(": "))
     });
+
     client.publish("test_topic", "hello world!")
+    
 </script>
 
 </html>
