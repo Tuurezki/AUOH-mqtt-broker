@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "aedes": "^0.40.1",
+    "mqtt": "^3.0.0",
     "websocket-stream": "^5.5.2"
   }
 }
