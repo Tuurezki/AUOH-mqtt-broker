@@ -5,9 +5,9 @@
 </head>
 <script>
     let options = {
-        host: 'localhost', //  https://mqtt-client-test.herokuapp.com/ , localhost
-        port: 8081, // 443, 8081
-        protocol: 'ws' // wss, ws
+        host: 'https://auoh-mqtt-tuure.herokuapp.com/', //  https://auoh-mqtt-tuure.herokuapp.com/ , localhost
+        port: 443, // 443, 8081
+        protocol: 'wss' // wss, ws
     };
     let client = mqtt.connect(options)
     client.on('connect', () => {
@@ -21,7 +21,7 @@
     });
 
     client.publish("test_topic", "hello world!")
-    
+
 </script>
 
 </html>
